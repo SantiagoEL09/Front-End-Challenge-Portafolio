@@ -1,0 +1,400 @@
+/* General: Estilos que se aplican a todo el documento */
+body {
+  font-family: 'Raleway', sans-serif; /* Establece la fuente Raleway para todo el texto */
+  margin: 0; /* Elimina los márgenes predeterminados del navegador */
+  background-color: #f8f8f8; /* Color de fondo gris claro para todo el cuerpo */
+  color: #333; /* Color de texto gris oscuro para mejor legibilidad */
+}
+
+.todo {
+  max-width: 960px; /* Limita el ancho máximo del contenido principal a 960 píxeles */
+  margin: 0 auto; /* Centra el contenido horizontalmente en la página */
+  padding: 20px; /* Agrega un espacio de 20 píxeles alrededor del contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Crea una sombra sutil alrededor del contenido */
+}
+
+/* Menú: Estilos para la barra de navegación */
+.menu {
+  background-color: #fff; /* Fondo blanco para el menú */
+  padding: 20px; /* Espacio interno del menú */
+  border-radius: 8px; /* Esquinas redondeadas para el menú */  
+}
+
+
+.menu__header {
+  display: flex;        /* Activa flexbox para alinear los elementos */
+  align-items: center;  /* Alinea verticalmente al centro */
+  gap: 20px;            /* Espacio entre la imagen y el texto (ajusta según prefieras) */
+}
+
+nav ul { /* Seleccionamos directamente la lista desordenada (ul) dentro de nav */
+  display: flex; /* Activamos flexbox para distribuir los elementos horizontalmente */
+  justify-content: space-evenly; /* Distribuimos los elementos con espacio uniforme entre ellos y los bordes */
+  list-style: none; /* Eliminamos los puntos de la lista */
+  padding: 0; /* Quitamos el relleno predeterminado */
+  width: 100%; /* Hacemos que la lista ocupe todo el ancho disponible */
+}
+
+.menu__list__item { /* Estilos para cada elemento de la lista (li) */
+  /* Agregamos padding para crear espacio alrededor del texto */
+  padding: 10px 20px; /* Espacio superior/inferior de 10px, izquierda/derecha de 20px */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.menu__list__item a { /* Estilos para los enlaces dentro de los elementos de la lista */
+  text-decoration: none; /* Quitamos el subrayado de los enlaces */
+  color: #333; /* Color de texto por defecto */
+  transition: font-weight 0.3s ease; /* Transición suave para el cambio de negrita */
+}
+
+.menu__list__item:hover { /* Estilos cuando el mouse está sobre el elemento */
+  background-color: #f0f0f0; /* Fondo gris claro al pasar el mouse */
+  cursor: pointer; /* Cambiamos el cursor a una mano para indicar que es interactivo */
+}
+
+.menu__list__item a:active { /* Estilos cuando se hace clic en el enlace */
+  font-weight: bold; /* Texto en negrita al hacer clic */
+}
+
+/* Títulos: Estilos para los encabezados (h2, h3) */
+h2, h3 {
+  color: #2980b9; /* Color azul llamativo para los títulos */
+}
+
+/* Secciones: Estilos generales para las secciones del portafolio */
+section {  
+  margin: 25px;
+}
+
+/* Title/Hero: Estilos para la sección principal con la imagen de perfil */
+.title {
+  display: flex;          /* Activamos Flexbox para organizar los elementos */
+  align-items: flex-start; /* Alineamos los elementos al inicio del contenedor (arriba) */
+  gap: 25px;             /* Espacio de 15px entre la imagen y el texto */
+  margin: 20px 35px 25px 35px;
+}
+
+.title__div { /* Contenedor para la imagen y el texto dentro de .title */
+  display: flex;          /* Activamos Flexbox en este contenedor también */
+  align-items: flex-start; /* Alineamos los elementos al inicio (arriba) */
+  gap: 30px;             /* Espacio entre la imagen y el texto */
+  width: 100%;            /* Hacemos que el contenedor ocupe todo el ancho disponible */
+}
+
+.title__profile {
+  width: 300px; /* Reducimos el tamaño de la imagen */
+  height: 300px; /* Mantenemos la proporción */
+  border-radius: 20px; /* Esquinas redondeadas */
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.8); /* Sombra negra sutil */
+  /* margin: 15px 35px; /* Espacio a la derecha de la imagen */
+}
+
+/* .title__container {
+  - No es necesario float, flexbox se encarga de la alineación -
+}
+ */
+.title__bio, /* Estilos para el título h2 */
+.title__subsection { /* Estilos para el subtítulo h3 */
+  text-align: left; /* Alineamos el texto a la izquierda */
+  margin-bottom: 10px; /* Espacio entre los títulos */
+}
+
+/* Sobre mi, Skills, Hobbies: Estilos para estas secciones */
+.about, .skills, .hobbies {
+  background-color: #fff; /* Fondo blanco */
+  padding: 30px; /* Espacio interno */
+  border-radius: 8px; /* Esquinas redondeadas */
+  /* box-shadow:0px 0px 25px 8px rgba(0, 0, 0, 0.3) ; */
+}
+
+.about:hover, .skills:hover, .hobbies:hover, .academic:hover {
+  box-shadow:0px 0px 25px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px); /* Elevamos ligeramente la caja al pasar el mouse */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición para efecto hover */
+}
+
+.skills,
+.hobbies, .academic { /* Seleccionamos ambas secciones para aplicarles estilos comunes */
+    text-align: center; /* Centramos el título de la sección */
+}
+
+.skills__title,
+.hobbies__title { /* Estilos para los títulos */
+    margin-bottom: 20px; /* Espacio inferior para separar el título de los elementos */
+}
+
+.skills__line,
+.hobbies__line { /* Estilos para los contenedores de las cajas */
+    display: flex; /* Usamos Flexbox para distribuir las cajas horizontalmente */
+    justify-content: center; /* Centramos las cajas horizontalmente */
+    flex-wrap: wrap; /* Permitimos que las cajas se ajusten en varias líneas si es necesario */
+    gap: 20px; /* Espacio entre las cajas */
+    margin: 0 -10px; /* Ajustamos los márgenes para contrarrestar el padding negativo de .skills__box */ 
+}
+
+.skills__box,
+.hobbies__box { /* Estilos para las cajas individuales */
+    flex: 0 0 calc(25% - 20px); /* Cada caja ocupa el 25% del ancho, menos el espacio del gap */
+    box-sizing: border-box; /* Incluimos el borde y el padding en el cálculo del ancho total */
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centramos el contenido dentro de cada caja */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición para efecto hover */
+}
+
+.skills__box:hover,
+.hobbies__box:hover {
+    transform: translateY(-5px); /* Elevamos ligeramente la caja al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 
+    Aumentamos la sombra al pasar el mouse */
+}
+
+.skills__img,
+.hobbies__img { /* Estilos para las imágenes */
+    width: 50px; /* Ajustamos el tamaño de las imágenes */
+    height: 50px;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.skills__name,
+.hobbies__name { /* Estilos para los nombres */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Formación Académica: Estilos para la sección de formación */
+.academic {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Contacto: Estilos para la sección de contacto */
+.formcontato {
+  display: flex;             /* Usamos Flexbox para organizar la imagen y el formulario */
+  align-items: flex-start;   /* Alineamos los elementos al inicio (arriba) del contenedor */
+  gap: 30px;                /* Espacio entre la imagen y el formulario */
+  background-color: #fff;    /* Fondo blanco para la sección */
+  padding: 20px;             /* Espacio interno en la sección */
+  border-radius: 8px;        /* Esquinas ligeramente redondeadas */
+}
+.formcontato:hover {
+  box-shadow:0px 0px 25px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.formcontato__contacto {  /* Contenedor para la imagen y el texto */
+  display: flex;             /* Usamos Flexbox en este contenedor también */
+  width: 100%;               /* Hacemos que el contenedor ocupe todo el ancho disponible */
+}
+
+.formcontato--esquerda {  /* Contenedor de la imagen */
+  flex: 1;                  /* La imagen ocupa aproximadamente la mitad del espacio */
+}
+
+.formcontato__img {       /* Estilos para la imagen */
+  width: auto;            /* La imagen ocupa todo el ancho de su contenedor */
+  height: auto;           /* La altura se ajusta automáticamente para mantener la proporción */
+  border-radius: 10px;     /* Esquinas redondeadas para la imagen */
+}
+
+.formcontato__text {     /* Contenedor del formulario y el texto */
+  flex: 1;                  /* El formulario ocupa aproximadamente la mitad del espacio */
+  padding-left: 20px;      /* Espacio a la izquierda del formulario */
+}
+
+.formcontato__title {   /* Título "Contacto" */
+  color: #333;           /* Color de texto oscuro */
+}
+
+.formcontato__subtext { /* Subtítulos del formulario */
+  color: #666;           /* Color de texto gris más claro */
+  margin-bottom: 10px;  /* Espacio inferior entre los subtítulos */
+}
+
+.formcontato__form {    /* Estilos para el formulario */
+  display: flex;          /* Usamos Flexbox para organizar los campos del formulario */
+  flex-direction: column; /* Los campos se apilan verticalmente */
+  gap: 10px;             /* Espacio entre los campos */
+  margin-top: 20px;
+}
+
+.formcontato__input,    /* Estilos para los campos de entrada de texto */
+.formcontato__textarea {/* Estilos para el área de texto */
+  padding: 10px;        /* Espacio interno en los campos */
+  border: 1px solid #ddd; /* Borde gris claro inicial */
+  border-radius: 5px;    /* Esquinas redondeadas */
+  outline: none;        /* Eliminamos el contorno predeterminado al enfocar */
+  transition: border-color 0.3s ease; /* Transición suave del color del borde */
+}
+
+.formcontato__textarea {/* Estilos para el área de texto */
+  padding: 10px;        /* Espacio interno en los campos */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px;    /* Esquinas redondeadas */
+}
+
+.formcontato__input:focus, .formcontato__textarea:focus {
+  border: 2px solid #2980b9;
+   /* Cambiamos el color del borde a azul al enfocar */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+   transform: scale(1.0080);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición para efecto hover */
+}
+
+.formcontato__botao {   /* Estilos para el botón "Enviar mensaje" */
+  background-color: #2980b9; /* Color de fondo azul */
+  color: #fff;          /* Color de texto blanco */
+  padding: 10px 20px;   /* Espacio interno en el botón */
+  border: none;         /* Sin borde */
+  border-radius: 5px;    /* Esquinas redondeadas */
+  cursor: pointer;      /* Cambiamos el cursor a una mano para indicar que es interactivo */
+}
+
+.formcontato__botao:hover{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+   transform: scale(1.0080);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transición para efecto hover */
+}
+
+/* Pie de página: Estilos para el pie de página */
+.footer {
+  text-align: center; /* Centra el texto */
+  background-color: #333; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  padding: 10px 0; /* Espacio interno */
+}
+
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+/*Mobile*/
+@media (max-width: 700px) {
+  /* Menú */
+  .menu {
+    padding: 15px; /* Reducimos el padding para pantallas más pequeñas */
+  }
+
+  .menu__list {
+    flex-direction: column; /* Apilamos los elementos del menú verticalmente */
+    gap: 10px;             /* Reducimos el espacio entre los elementos */
+  }
+
+  /* Title/Hero */
+  .title {
+    flex-direction: column; /* Apilamos la imagen y el texto verticalmente */
+  }
+
+  .title__profile {
+    width: 120px; /* Reducimos el tamaño de la imagen */
+    height: 120px;
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+  }
+
+  .title__bio, 
+  .title__subsection {
+    font-size: 0.9em; /* Reducimos el tamaño de los títulos */
+  }
+
+  /* Skills y Hobbies */
+  .skills__box, 
+  .hobbies__box {
+    flex: 0 0 calc(50% - 10px); /* 2 cajas por fila en móviles */
+    padding: 15px; /* Reducimos el padding */
+  }
+
+  .skills__img, 
+  .hobbies__img {
+    width: 40px; /* Reducimos el tamaño de las imágenes */
+    height: 40px;
+  }
+
+  /* Formación Académica */
+  .academic__courses__box {
+    width: 100%; /* Una caja por fila en móviles */
+  }
+
+  /* Contacto */
+  .formcontato {
+    flex-direction: column; /* Apilamos la imagen y el formulario verticalmente */
+  }
+
+  .formcontato--esquerda {
+    display: none;
+  /* Ocultamos la imagen en tablets */
+  }
+
+  .formcontato__text {
+    padding-left: 0; /* Eliminamos el padding izquierdo del formulario */
+  }
+
+  .formcontato__input, 
+  .formcontato__textarea {
+    width: calc(100% - 20px); /* Ajustamos el ancho de los campos del formulario */
+  }
+}
+
+/*Tablet*/
+@media (min-width: 701px) and (max-width: 1023px) {
+  /* Menú */
+  .menu {
+    padding: 30px; /* Aumentamos el padding para pantallas más grandes */
+  }
+
+  .menu__list {
+    gap: 30px; /* Aumentamos el espacio entre los elementos del menú */
+  }
+
+  /* Title/Hero */
+  .title__profile {
+    width: 200px; /* Agrandamos un poco la imagen de perfil */
+    height: 200px;
+  }
+
+  .title__container {
+    /* Puedes ajustar el tamaño de los títulos si es necesario */
+    font-size: 1.2em; /* Ejemplo: aumentamos el tamaño de fuente */
+  }
+
+  /* Skills y Hobbies */
+  .skills__box, .hobbies__box {
+    flex: 0 0 calc(33.33% - 20px); /* 3 cajas por fila en tablets */
+  }
+
+  /* Formación Académica */
+  .academic__courses__box {
+    width: 50%;  /* Dos cajas por fila en tablets */
+  }
+
+  /* Contacto */
+  .formcontato {
+    flex-direction: row; /* Volvemos a la disposición horizontal en tablets */
+  }
+
+  .formcontato--esquerda {
+    display: none;
+    /* Ocultamos la imagen en tablets */
+  }
+
+  .formcontato__text {
+    padding-left: 30px; /* Aumentamos el espacio a la izquierda del formulario */
+  }
+}
+
+/* Desktop: Estilos específicos para pantallas de escritorio */
+@media (min-width: 1024px) { /* A partir de 1024px de ancho (escritorio) */
+  .formcontato--esquerda {
+    display: flex; /* Mostramos la imagen en escritorio (flex para alinearla) */
+    margin-right: 25px;
+  }
+  .title__profile{
+    width: 300px; /* Reducimos el tamaño de la imagen */
+    height: 300px;
+  }
+}
+
+
+
